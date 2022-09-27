@@ -1,4 +1,6 @@
-.navbar-nav .navbar-dark .navbar-link{
-    color: #48cae4;
-    font-weight: 400px;
+.carousel-item img{
+    height: 92vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
