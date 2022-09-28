@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/services.css">
     <title>MMB-Software-House</title>
+    <link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="load()">
 
 <!-- navbar-start-here -->
 <nav class="navbar navbar-expand-lg sticky-top shadow-lg p-3 rounded" style="background-color: #033a7a;">
@@ -132,6 +134,29 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
   </div>
 </div>
 <!-- second section of services card end here -->
+
+<div class="container" style="background-color:#016064 ;">
+  <div class="row">
+     <div class="col-sm">
+        <p id='0101' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">1214 </p>
+        <p class="text-light" style="font-family: 'Roboto Slab', serif;">Those people are taking our srvices </p>
+     </div>
+     <div class="col-sm">
+        <p id='0102' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">678</p>
+        <p class="text-light" style="font-family: 'Roboto Slab', serif;">Those people have taken our srvices</p>
+  </div>
+  <div class="col-sm">
+   <p id='0104' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">4060</p>
+   <p class="text-light" style="font-family: 'Roboto Slab', serif;">Members signed</p>
+</div>
+  <div class="col-sm">
+     <p class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;"><span id='0103'>6</span>%</p>
+     <p class="text-light align-content-center" style="font-family: 'Roboto Slab', serif;">Average complain rate</p>
+  </div>
+</div>
+</div>
+
+
 <div class="m-5">
 
   <form class="row g-4 needs-validation mt-5 shadow-lg" novalidate>
@@ -139,7 +164,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     style="text-align: center; font-family: 'Roboto Slab', serif;">If you want to get our services. Then, please fill this form.</h3>
     <div class="col-md-4">
       <label for="validationCustom01" class="form-label">First name</label>
-      <input type="text" class="form-control" id="validationCustom01" value="" required>
+      <input type="text" class="form-control" placeholder="Your First Name"  id="validationCustom01" value="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -149,7 +174,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     </div>
     <div class="col-md-4">
       <label for="validationCustom02" class="form-label">Last name</label>
-      <input type="text" class="form-control" id="validationCustom02" value="" required>
+      <input type="text" class="form-control" placeholder="Your Last Name"  id="validationCustom02" value="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -159,7 +184,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     </div>
     <div class="col-md-4">
       <label for="validationCustom03" class="form-label">Phone Number</label>
-      <input type="number" class="form-control" id="validationCustom03" value="" required>
+      <input type="number" class="form-control" placeholder="Your Number"  id="validationCustom03" value="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -170,7 +195,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     
     <div class="col-md-4">
       <label for="validationCustom07" class="form-label">City</label>
-      <input type="text" class="form-control" id="validationCustom07" value="" required>
+      <input type="text" class="form-control" placeholder="Karachi"  id="validationCustom07" value="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -197,7 +222,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     </div>
     <div class="col-md-4">
       <label for="validationCustom09" class="form-label">Zip</label>
-      <input type="number" class="form-control" id="validationCustom09" value="" required>
+      <input type="number" class="form-control" placeholder="75790"  id="validationCustom09" value="" required>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -208,9 +233,9 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
 
     <div class="col-md-5 ">
       <label for="validationCustomUsername" class="form-label">Email address</label>
-      <div class="input-group has-validation ">
-        <span class="input-group-text " id="inputGroupPrepend">name@example.com</span>
-        <input type="text" class="form-control " style="border-radius: 0px 6px 6px 0px" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="" required>
+      <div class="input-group has-validation d-flex">
+        <span class="input-group-text text-wrap" id="inputGroupPrepend">@</span>
+        <input type="text" class="form-control " placeholder="name@example.com"  style="border-radius: 0px 6px 6px 0px" id="validationCustomUsername" aria-describedby="inputGroupPrepend" value="" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -222,8 +247,8 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     <div class="col-md-7">
       <label for="basic-url validationCustom04" class="form-label">LinkedIn Profile</label>
         <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3">https://www.linkedin.com/in/</span>
-        <input type="text" class="form-control" style="border-radius: 0px 6px 6px 0px" id="basic-url validationCustom04" aria-describedby="basic-addon3" value="" required>
+          <span class="input-group-text" id="basic-addon3">https:</span>
+        <input type="text" class="form-control" placeholder="https://www.linkedin.com/in/"  style="border-radius: 0px 6px 6px 0px" id="basic-url validationCustom04" aria-describedby="basic-addon3" value="" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -247,8 +272,8 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
     <div class="col-md-7">
       <label for="basic-url validationCustom05" class="form-label">Github Link</label>
         <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3">https://github.com/</span>
-        <input type="text" class="form-control" style="border-radius: 0px 6px 6px 0px" id="basic-url validationCustom05" aria-describedby="basic-addon3" value="" required>
+          <span class="input-group-text" id="basic-addon3">https:</span>
+        <input type="text" class="form-control" placeholder="https://github.com/" style="border-radius: 0px 6px 6px 0px" id="basic-url validationCustom05" aria-describedby="basic-addon3" value="" required>
         <div class="valid-feedback">
           Looks good!
         </div>
@@ -260,7 +285,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
 
     <div class="col-12">
       <label for="exampleFormControlTextarea1 validationCustom10" class="form-label">Write Here, What sort of work do you want to give us.</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1 validationCustom10" rows="3" value="" required></textarea>
+      <textarea class="form-control" placeholder="Write here..."  id="exampleFormControlTextarea1 validationCustom10" rows="3" value="" required></textarea>
       <div class="valid-feedback">
         Looks good!
       </div>
@@ -285,9 +310,35 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
       <button class="btn btn-primary mb-3" type="submit">Submit form</button>
     </div>
   </div>
+  <!-- </form> -->
     
-  </form>
 
+  <!-- <p>
+    <div class="d-flex justify-content-center fs-1 fw-bold ">Our Customers</div>
+    <div class="d-flex justify-content-center fs-1 fw-bold "style="color: #016064;">Animation Counter</div>
+    </p> -->
+    <!-- <p> -->
+    <!-- <div class="container" style="background-color:#016064 ;">
+       <div class="row">
+          <div class="col-sm">
+             <p id='0101' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">1214 </p>
+             <p class="text-light" style="font-family: 'Roboto Slab', serif;">Those people are taking our srvices </p>
+          </div>
+          <div class="col-sm">
+             <p id='0102' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">678</p>
+             <p class="text-light" style="font-family: 'Roboto Slab', serif;">Those people have taken our srvices</p>
+       </div>
+       <div class="col-sm">
+        <p id='0104' class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;">4060</p>
+        <p class="text-light" style="font-family: 'Roboto Slab', serif;">Members signed</p>
+  </div>
+       <div class="col-sm">
+          <p class="fs-2 text-light" style="font-family: 'Roboto Slab', serif;"><span id='0103'>6</span>%</p>
+          <p class="text-light align-content-center" style="font-family: 'Roboto Slab', serif;">Average complain rate</p>
+       </div>
+    </div>
+ </div> -->
+ <!-- </p> -->
 
   <!-- footer-start-here -->
 <nav class="navbar navbar-expand-lg navbar-dark mt-5" style="background-color: #002B5B;">
@@ -346,6 +397,7 @@ style="text-align: center; font-family: 'Roboto Slab', serif; background-color: 
 
   <script src="../js/btn.js"></script>
   <script src="../js/form.js"></script>
+  <script src="../js/number.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
